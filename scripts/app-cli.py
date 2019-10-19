@@ -1,5 +1,5 @@
 import click
-from user import User
+from scripts.user import User
 
 
 @click.group()
