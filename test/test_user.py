@@ -18,7 +18,7 @@ class TestUser(TestCase):
     def test_create_repo(self):
         self.assertTrue(True)
 
-    @mock.patch('github.Github.get_user')
+    @mock.patch("github.Github.get_user")
     def test_list_all_notes(self, mock_get_user: mock.Mock):
         login_name = "login"
         user = User(login_name, "password")

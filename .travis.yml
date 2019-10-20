@@ -8,10 +8,12 @@ sudo: required
 install:
  - pip install -r requirements.txt
  - pip install -e .
+ - pip install pytest
+ - pip install pytest-cov
  - pip install coveralls
 
 script:
- - python3 -m pytest --capture=sys
+ - python3 -m pytest --capture=sys --cov=OctoMemo test/
 
 after_success:
  - coveralls
