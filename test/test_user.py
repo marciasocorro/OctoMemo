@@ -20,7 +20,8 @@ class TestUser(TestCase):
 
     @mock.patch('github.Github.get_user')
     def test_list_all_notes(self, mock_get_user: mock.Mock):
-        user = User("login", "password")
+        login_name = "login"
+        user = User(login_name, "password")
         expected_file_name = "code_file.txt"
         mock_repo = self.get_mocked_github_repo(expected_file_name)
         mock_github = Mock()
@@ -32,6 +33,8 @@ class TestUser(TestCase):
         captured = self.capsys.readouterr()
         self.assertTrue("Available notes:" in captured.out)
         self.assertTrue(expected_file_name in captured.out)
+        mock_github.get_repo.assert_called_with("octomemo_" + login_name)
+        mock_repo.get_dir_contents.assert_called_with("")
 
     def get_mocked_github_repo(self, expected_file_name):
         mock_file = Mock()
