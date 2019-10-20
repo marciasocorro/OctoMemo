@@ -16,7 +16,7 @@ class User:
     def list_all_notes(self):
         """Method to list all notes in a github repository."""
         repo = self.auth.get_user().get_repo("octomemo_" + self._login)
-        print("Avaiable notes:")
+        print("Available notes:")
         for file in repo.get_dir_contents(""):
             print(file.name)
 
