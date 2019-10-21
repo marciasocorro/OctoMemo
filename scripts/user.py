@@ -1,4 +1,4 @@
-from github import Github
+from github import Github, GithubException
 import base64
 import os
 
@@ -15,10 +15,13 @@ class User:
 
     def list_all_notes(self):
         """Method to list all notes in a github repository."""
-        repo = self.auth.get_user().get_repo("octomemo_" + self._login)
-        print("Available notes:")
-        for file in repo.get_dir_contents(""):
-            print(file.name)
+        try:
+            repo = self.auth.get_user().get_repo("octomemo_" + self._login)
+            print("Available notes:")
+            for file in repo.get_dir_contents(""):
+                print(file.name)
+        except GithubException:
+            print("Repo not found")
 
     def create_note(self, name, message="none", content=""):
         """Method to create a note in a github repository.
