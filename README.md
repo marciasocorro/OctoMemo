@@ -8,13 +8,13 @@
   <a href="https://github.com/LeonardoFurtado/OctoMemo/blob/master/LICENSE"><img src="https://img.shields.io/badge/Open_source-MIT-green.svg?color=orange&&style=for-the-badge&logo=git&logoColor=orange"/></a>
    <a href="https://github.com/LeonardoFurtado/OctoMemo"><img src="https://img.shields.io/github/stars/LeonardoFurtado/OctoMemo.svg?color=informational&style=for-the-badge&logo=github&label=Stars&logoColor=informational"/></a>
   <a href="https://img.shields.io/badge/code%20style-black-black?style=for-the-badge"><img src="https://img.shields.io/badge/code%20style-black-black?style=for-the-badge"/></a>
-  
-  
+
+
 </p>
 
-So, currently I no longer like using note-taking apps like Ever...(You know who :elephant:), so I've been using Github to save some notes on my CS classes, internship and other stuffs. However, I don't like the idea of having to log into Github to add a simple note. Therefore, I created this CLI to accomplish this task.
-
 ### Work in progress, use at your own risk!!!
+
+So, currently I no longer like using note-taking apps like Ever...(You know who :elephant:), so I've been using Github to save some notes on my CS classes, internship and other stuffs. However, I don't like the idea of having to log into Github to add a simple note. Therefore, I created this CLI to accomplish this task.
 
 
 ### :book: Contents
