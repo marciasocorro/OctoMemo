@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/travis/LeonardoFurtado/OctoMemo/master?logo=travis&style=for-the-badge" alt="Build Status"></a>
   <a href="https://coveralls.io/github/LeonardoFurtado/OctoMemo">
         <img src="https://img.shields.io/coveralls/github/LeonardoFurtado/OctoMemo/master?logo=coveralls&style=for-the-badge" alt="Code Coverage"></a>
-  <a href="https://github.com/LeonardoFurtado/OctoMemo/blob/master/LICENSE"><img src="https://img.shields.io/badge/Open_source-MIT-green.svg?color=orange&&style=for-the-badge&logo=git&logoColor=orange"/></a>
+  <a href="https://github.com/LeonardoFurtado/OctoMemo/blob/master/LICENSE"><img src="https://img.shields.io/github/license/LeonardoFurtado/OctoMemo?logo=git&logoColor=orange&style=for-the-badge"/></a>
    <a href="https://github.com/LeonardoFurtado/OctoMemo"><img src="https://img.shields.io/github/stars/LeonardoFurtado/OctoMemo.svg?color=informational&style=for-the-badge&logo=github&label=Stars&logoColor=informational"/></a>
   <a href="https://img.shields.io/badge/code%20style-black-black?style=for-the-badge"><img src="https://img.shields.io/badge/code%20style-black-black?style=for-the-badge"/></a>
 
