@@ -13,7 +13,7 @@ install:
  - pip install coveralls
 
 script:
- - python3 -m pytest --capture=sys --cov=scripts test/
+ - python3 -m pytest --capture=sys --cov=scripts tests/
 
 after_success:
  - coveralls
