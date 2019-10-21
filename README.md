@@ -18,6 +18,12 @@ So, currently I no longer like using note-taking apps like Ever...(You know who 
 
 
 ### :book: Contents
+- [Instalation](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#gear-instalation)
+- [QuickStart](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#rocket-quickstart)
+- [Usage](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#computer-usage)
+- [Contributing](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#handshake-contributing)
+- [Project layout](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#tanabata_tree-project-layout)
+- [Maintainers](https://github.com/LeonardoFurtado/OctoMemo/blob/master/README.md#building_construction-maintainers)
 
 ### :gear: Instalation
 
