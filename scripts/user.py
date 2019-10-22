@@ -2,29 +2,23 @@ from github import Github, GithubException
 import base64
 import os
 
+
 class User:
-    def __init__(self, login, password):
-        self._login = login
-        self._password = password
-        self.auth = Github(login, password)
+    def __init__(self, token):
+        self.auth = Github(token)
         self.repo = self.get_repo()
 
     def create_repo(self):
         """Method to create a repository for notes."""
-        return self.auth.get_user().create_repo("octomemo_" + self._login, private=True)
+        return self.auth.get_user().create_repo("octobook", private=True)
 
     def get_repo(self):
         """ Gets the repo if exists, create it if not """
-        repo_name = self._login
-
-        if '@' in repo_name:
-            repo_name = repo_name.replace('@', '-')
-
         try:
-            repo = self.auth.get_user().get_repo("octomemo_" + repo_name)
+            repo = self.auth.get_user().get_repo("octobook")
             return repo
         except GithubException as error:
-            if error.data.get('message') == 'Not Found':
+            if error.data.get("message") == "Not Found":
                 return self.create_repo()
             raise
 
@@ -35,7 +29,7 @@ class User:
             for file in self.repo.get_dir_contents(""):
                 print(file.name)
         except GithubException as error:
-           print(error.data.get('message'))
+            print(error.data.get("message"))
 
     def create_note(self, name, message="none", content=""):
         """Method to create a note in a github repository.
@@ -53,7 +47,7 @@ class User:
         :param str message: Commit message
         """
         sha = self.repo.get_contents(name).sha
-        repo.delete_file(name, message, sha)
+        self.repo.delete_file(name, message, sha)
 
     def edit_note(self, name):
         """Method to edit a note in a github repository.
@@ -67,7 +61,7 @@ class User:
         f.close()
         myCmd = "nano " + name
         os.system(myCmd)
-        sha = repo.get_contents(name).sha
+        sha = self.repo.get_contents(name).sha
         f = open(name, "r")
         contents = f.read()
-        repo.update_file(name, "none", contents, sha)
+        self.repo.update_file(name, "none", contents, sha)

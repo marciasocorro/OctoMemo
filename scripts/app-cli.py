@@ -1,14 +1,14 @@
 import click
 from user import User
+from file_management import get_github_token
 
 
 @click.group()
 def cli():
     context = click.get_current_context()
     context.obj = {}
-    login = ""
-    password = ""
-    memouser = User(login, password)
+    token = get_github_token()
+    memouser = User(token)
     context.obj["memouser"] = memouser
 
 
@@ -25,7 +25,7 @@ def cnote(context):
     user = context.obj[u"memouser"]
     filename = input("filename:")
     text = input("text:")
-    user.create_note(filename, text)
+    user.create_note(filename, content=text)
 
 
 @cli.command()
