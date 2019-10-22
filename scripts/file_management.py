@@ -25,9 +25,15 @@ def get_github_token():
             token = file.read().strip()
     except IOError as e:
         print("Unable to read token file.\n")
+        requests_github_token()
 
     if not token:
         print("Unable to find github token.")
         raise SystemExit
     else:
         return token
+
+
+def requests_github_token():
+    token = input("Insert your token:")
+    store_github_token(token)

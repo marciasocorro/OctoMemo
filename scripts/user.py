@@ -47,7 +47,7 @@ class User:
         :param str message: Commit message
         """
         sha = self.repo.get_contents(name).sha
-        repo.delete_file(name, message, sha)
+        self.repo.delete_file(name, message, sha)
 
     def edit_note(self, name):
         """Method to edit a note in a github repository.
@@ -61,7 +61,7 @@ class User:
         f.close()
         myCmd = "nano " + name
         os.system(myCmd)
-        sha = repo.get_contents(name).sha
+        sha = self.repo.get_contents(name).sha
         f = open(name, "r")
         contents = f.read()
-        repo.update_file(name, "none", contents, sha)
+        self.repo.update_file(name, "none", contents, sha)
