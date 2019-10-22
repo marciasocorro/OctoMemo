@@ -18,38 +18,36 @@ class TestUser(TestCase):
 
     @mock.patch("github.Github.get_user")
     def test_list_all_notes(self, mock_get_user: mock.Mock):
-        login_name = "login"
+        token = "token"
         expected_file_name = "code_file.txt"
         mock_repo = self.get_mocked_github_repo(expected_file_name)
         mock_github = Mock()
         mock_github.get_repo.return_value = mock_repo
         mock_get_user.return_value = mock_github
 
-        user = User(login_name, "password")
+        user = User(token)
         user.list_all_notes()
 
         captured = self.capsys.readouterr()
         self.assertTrue("Available notes:" in captured.out)
         self.assertTrue(expected_file_name in captured.out)
-        mock_github.get_repo.assert_called_with("octomemo_" + login_name)
+        mock_github.get_repo.assert_called_with("octobook")
         mock_repo.get_dir_contents.assert_called_with("")
 
     @mock.patch("github.Github.get_user")
     def test_repo_creation(self, mock_get_user: mock.Mock):
         mock_github = Mock()
 
-        mock_github.get_repo.side_effect = GithubException(404, {"message": "Not Found" })
+        mock_github.get_repo.side_effect = GithubException(404, {"message": "Not Found"})
         mock_github.create_repo.return_value = self.get_mocked_github_repo("")
         mock_get_user.return_value = mock_github
 
-        login_name = "login"
-        user = User(login_name, "password")
+        token = "token"
+        user = User(token)
 
-        mock_github.get_repo.assert_called_with("octomemo_" + login_name)
+        mock_github.get_repo.assert_called_with("octobook")
         mock_github.create_repo.assert_called_once()
-        mock_github.create_repo.assert_called_with(
-            "octomemo_" + login_name, private=True
-        )
+        mock_github.create_repo.assert_called_with("octobook", private=True)
 
         mock_get_user.return_value = mock_github
 
