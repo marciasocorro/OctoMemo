@@ -6,9 +6,8 @@ from user import User
 def cli():
     context = click.get_current_context()
     context.obj = {}
-    login = ""
-    password = ""
-    memouser = User(login, password)
+    token = ""
+    memouser = User(token)
     context.obj["memouser"] = memouser
 
 
