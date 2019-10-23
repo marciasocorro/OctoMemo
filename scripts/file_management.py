@@ -23,7 +23,7 @@ def get_github_token():
     try:
         with open(auth_path()) as file:
             token = file.read().strip()
-    except IOError as e:
+    except IOError:
         print("Unable to read token file.\n")
         requests_github_token()
 
