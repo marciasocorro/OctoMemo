@@ -32,10 +32,11 @@ def cnote(context, file_name, content):
 
 @cli.command()
 @click.pass_context
-def dnote(context):
+@click.argument("file_name")
+def dnote(context, file_name):
     user = context.obj[u"memouser"]
-    filename = filename = input("filename:")
-    user.delete_note(filename)
+    file_name = file_name
+    user.delete_note(file_name)
 
 
 @cli.command()
