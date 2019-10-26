@@ -10,7 +10,10 @@ def auth_path():
 def store_github_token(token):
     """Store Github token."""
     try:
-        with os.fdopen(os.open(auth_path(), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600), "w") as file:
+        with os.fdopen(
+            os.open(auth_path(), os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600),
+            "w",
+        ) as file:
             file.write(token)
         print("Success!")
     except OSError:

@@ -38,7 +38,9 @@ class TestUser(TestCase):
     def test_repo_creation(self, mock_get_user: mock.Mock):
         mock_github = Mock()
 
-        mock_github.get_repo.side_effect = GithubException(404, {"message": "Not Found"})
+        mock_github.get_repo.side_effect = GithubException(
+            404, {"message": "Not Found"}
+        )
         mock_github.create_repo.return_value = self.get_mocked_github_repo("")
         mock_get_user.return_value = mock_github
 
