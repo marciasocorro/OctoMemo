@@ -20,12 +20,14 @@ def lnote(context):
 
 
 @cli.command()
+@click.option("--content", default="", help="text content")
 @click.pass_context
-def cnote(context):
+@click.argument("file_name")
+def cnote(context, file_name, content):
     user = context.obj[u"memouser"]
-    filename = input("filename:")
-    text = input("text:")
-    user.create_note(filename, content=text)
+    file_name = file_name
+    text_content = content
+    user.create_note(file_name, content=text_content)
 
 
 @cli.command()
