@@ -41,10 +41,11 @@ def dnote(context, file_name):
 
 @cli.command()
 @click.pass_context
-def enote(context):
+@click.argument("file_name")
+def enote(context, file_name):
     user = context.obj[u"memouser"]
-    filename = input("filename:")
-    user.edit_note(filename)
+    file_name = file_name
+    user.edit_note(file_name)
 
 
 if __name__ == "__main__":
