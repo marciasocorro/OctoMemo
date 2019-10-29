@@ -51,6 +51,24 @@ Commands:
 ### :handshake: Contributing
 
 ### :tanabata_tree: Project layout
+```
+OctoMemo
+├── scripts
+│   ├── app-cli.py
+│   ├── file_management.py
+│   ├── __init__.py
+│   ├── note.py
+│   └── user.py
+├── tests
+│   ├── __init__.py
+│   └── test_user.py
+├── LICENSE
+├── readings.md
+├── README.md
+├── requirements-dev.txt
+├── requirements.txt
+└── setup.py
+```
 
 ### :building_construction: Maintainers
 
