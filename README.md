@@ -35,7 +35,7 @@ Not avaiable.
 
 [This will be updated soon]
 
-Download thist repo, use `cd OctoMemo` and try `python3 scripts/app-cli [OPTIONS] COMMAND [ARGS]`
+Download thist repo, use `cd OctoMemo` and try `python3 scripts/app-cli.py [OPTIONS] COMMAND [ARGS]`
 
 ### :computer: Usage
 
