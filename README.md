@@ -31,6 +31,19 @@ So, currently I no longer like using note-taking apps like Ever...(You know who 
 
 ### :computer: Usage
 
+```
+Usage: app-cli.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  cnote
+  dnote
+  enote
+  lnote
+```
+
 ### :handshake: Contributing
 
 ### :tanabata_tree: Project layout
