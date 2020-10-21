@@ -28,6 +28,9 @@ So, currently I no longer like using note-taking apps like Ever...(You know who 
 ### :gear: Instalation
 
 ### :rocket: QuickStart
+[This will be updated soon]
+
+Download thist repo, use `cd OctoMemo` and try `python3 scripts/app-cli.py [OPTIONS] COMMAND [ARGS]`
 
 ### :computer: Usage
 
