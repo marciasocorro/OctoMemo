@@ -29,7 +29,26 @@ So, currently I no longer like using note-taking apps like Ever...(You know who 
 
 ### :gear: Instalation
 
-Not avaiable.
+1) Fetch from repo:
+  ```
+  git clone https://github.com/LeonardoFurtado/OctoMemo.git
+  ```
+2) Change to OctoMemo directory
+  ```
+  cd OctoMemo
+  ```
+2) Create virtualenv based on your own system:
+  ```
+  python3 -m venv venv
+  ```
+3) Activate virtual environment:
+  ```
+  source venv/bin/activate
+  ```
+4) Pipe requirements to venv folder:
+  ```
+  pip install -r requirements.txt
+  ```
 
 ### :rocket: QuickStart
 
