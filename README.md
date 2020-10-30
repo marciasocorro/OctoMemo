@@ -72,6 +72,8 @@ Commands:
 ```
 ### :handshake: Contributing
 
+### :flask: Testing
+
 ### :tanabata_tree: Project layout
 ```
 OctoMemo
