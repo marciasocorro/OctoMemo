@@ -65,10 +65,10 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  cnote
-  dnote
-  enote
-  lnote
+  create
+  delete
+  edit
+  list
 ```
 ### :handshake: Contributing
 
