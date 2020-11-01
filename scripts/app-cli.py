@@ -14,7 +14,7 @@ def cli():
 
 @cli.command()
 @click.pass_context
-def lnote(context):
+def list(context):
     user = context.obj[u"memouser"]
     user.list_all_notes()
 
@@ -23,7 +23,7 @@ def lnote(context):
 @click.option("--content", default="", help="text content")
 @click.pass_context
 @click.argument("file_name")
-def cnote(context, file_name, content):
+def create(context, file_name, content):
     user = context.obj[u"memouser"]
     file_name = file_name
     text_content = content
@@ -33,7 +33,7 @@ def cnote(context, file_name, content):
 @cli.command()
 @click.pass_context
 @click.argument("file_name")
-def dnote(context, file_name):
+def delete(context, file_name):
     user = context.obj[u"memouser"]
     file_name = file_name
     user.delete_note(file_name)
@@ -42,7 +42,7 @@ def dnote(context, file_name):
 @cli.command()
 @click.pass_context
 @click.argument("file_name")
-def enote(context, file_name):
+def edit(context, file_name):
     user = context.obj[u"memouser"]
     file_name = file_name
     user.edit_note(file_name)
